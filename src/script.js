@@ -9,6 +9,7 @@ function getCharInfo(e) {
         while(infoContainer.firstChild) {
             infoContainer.removeChild(infoContainer.firstChild);
         };
+        infoContainer.insertAdjacentHTML("beforeend", `<h2>Characters from episode ${epidoseNumber}:</h2>`);
         axios.get(`https://swapi.dev/api/films/${epidoseNumber}/`)
         .then((result) => {
             const charLinks = result.data.characters

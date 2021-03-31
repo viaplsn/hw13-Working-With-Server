@@ -23,6 +23,8 @@ h1 {
     font-size: 2vw;
 }
 h2 {
+    width: 100%;
+    display: block;
     font-size: 1.5vw;
 }
 section {
@@ -109,7 +111,6 @@ h3 {
     text-transform: lowercase;
 }
 .char-info {
-    margin-top: 0.5vh;
     margin-bottom: 0.5vh;
     font-family: 'Righteous', cursive;
     font-size: 0.9vw;
