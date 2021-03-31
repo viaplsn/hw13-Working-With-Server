@@ -5,6 +5,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 
 *, *::before, *::after {
+    box-sizing: border-box;
     margin: 0;
 }
 body {
@@ -12,22 +13,28 @@ body {
     background-image: url(assets/images/background.jpg);
     background-size: cover;
 }
-h1 {
-    font-size: 2.5vw;
+h1, h2 {
     text-align: center;
     font-family: 'Starjedi';
     color: yellow;
 }
+h1 {
+    height: 6vh;
+    font-size: 2vw;
+}
+h2 {
+    font-size: 1.5vw;
+}
 section {
+    position: relative;
+    height: 93vh;
     margin-top: 1vh;
     padding: 0 1vw;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
 }
 form {
-    margin-bottom: 1vh;
     width: 50vw;
     display: flex;
     flex-direction: row;
@@ -46,34 +53,47 @@ input, button {
     transition: all linear 0.5s;
 }
 input {
+    padding-left: 1.5vw;
     width: 25%;
+}
+input::selection {
+    color: yellow;
+    background: rgb(30, 5, 65);
+}
+::placeholder {
+    color: yellow;
 }
 button {
     padding: 0;
+}
+button:hover{
+    cursor: pointer;
 }
 #info-button {
     width: 70%;
 }
 #planet-button {
+    position: absolute;
+    bottom: 2vh;
     width: 50vw;
-    margin-top: 1vh;
 }
-#info-button:hover, #planet-button:hover {
-    cursor: pointer;
+#info-button:hover, #planet-button:hover, input:hover, input:focus {
     color: rgb(30, 5, 65);
     border: 1px solid yellow;
     background-color: yellow;
     transform: scale(1.05);
 }
+input:hover, input:focus {
+    cursor: text;
+}
 #info-container {
+    margin-top: 1vh;
     width: 100%;
-    min-height: 80vh;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
     gap: 2vw;
-    transition: all linear 2.5s;
 }
 .character-container {
     display: flex;
@@ -97,6 +117,6 @@ h3 {
     color: yellow;
 }
 .gender {
-    width: 2.5vw;
-    height: 2.5vw;
+    width: 2.3vw;
+    height: 2.3vw;
 }
