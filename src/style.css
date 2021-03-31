@@ -1,3 +1,102 @@
+@font-face {
+    font-family: 'Starjedi';
+    src: url(assets/fonts/starjedi/Starjedi.ttf);
+}
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+*, *::before, *::after {
+    margin: 0;
+}
+body {
+    height: 100vh;
+    background-image: url(assets/images/background.jpg);
+    background-size: cover;
+}
 h1 {
-    font-style: italic;
+    font-size: 2.5vw;
+    text-align: center;
+    font-family: 'Starjedi';
+    color: yellow;
+}
+section {
+    margin-top: 1vh;
+    padding: 0 1vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+form {
+    margin-bottom: 1vh;
+    width: 50vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+input, button {
+    padding: 0;
+    border: 1px solid yellow;
+    border-radius: 1vh;
+    outline: none;
+    background-color: transparent;
+    font-size: 1vw;
+    font-family: 'Starjedi';
+    color: yellow;
+    text-transform: lowercase;
+    transition: all linear 0.5s;
+}
+input {
+    width: 25%;
+}
+button {
+    padding: 0;
+}
+#info-button {
+    width: 70%;
+}
+#planet-button {
+    width: 50vw;
+    margin-top: 1vh;
+}
+#info-button:hover, #planet-button:hover {
+    cursor: pointer;
+    color: rgb(30, 5, 65);
+    border: 1px solid yellow;
+    background-color: yellow;
+    transform: scale(1.05);
+}
+#info-container {
+    width: 100%;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 2vw;
+    transition: all linear 2.5s;
+}
+.character-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+h3 {
+    display: inline-block;
+    font-size: 1vw;
+    font-family: 'Starjedi';
+    color: yellow;
+    text-transform: lowercase;
+}
+.char-info {
+    margin-top: 0.5vh;
+    margin-bottom: 0.5vh;
+    font-family: 'Righteous', cursive;
+    font-size: 0.9vw;
+    font-weight: bold;
+    color: yellow;
+}
+.gender {
+    width: 2.5vw;
+    height: 2.5vw;
 }

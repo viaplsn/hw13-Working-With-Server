@@ -7,8 +7,21 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Hello, World!</h1>
+    <header>
+        <h1>Hello, World!</h1>
+    </header>
+    <main>
+        <section>
+            <form>
+                <input type="text">
+                <button id="info-button" type="button">Get information about characters</button>
+            </form>
+            <div id="info-container"></div>
+            <button id="planet-button" type="button">Get information about planets</button>
+        </section>
+    </main>
     
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script defer src="script.js"></script>
 </body>
 </html>
