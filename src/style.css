@@ -79,7 +79,7 @@ button:hover{
     bottom: 2vh;
     width: 50vw;
 }
-#info-button:hover, #planet-button:hover, input:hover, input:focus {
+#info-button:hover, #planet-button:hover, input:hover, input:focus, #next-page:hover {
     color: rgb(30, 5, 65);
     border: 1px solid yellow;
     background-color: yellow;
@@ -103,9 +103,9 @@ input:hover, input:focus {
     align-items: center;
     justify-content: center;
 }
-h3 {
+h4 {
     display: inline-block;
-    font-size: 1vw;
+    font-size: 0.9vw;
     font-family: 'Starjedi';
     color: yellow;
     text-transform: lowercase;
@@ -113,11 +113,25 @@ h3 {
 .char-info {
     margin-bottom: 0.5vh;
     font-family: 'Righteous', cursive;
-    font-size: 0.9vw;
+    font-size: 0.8vw;
     font-weight: bold;
     color: yellow;
 }
 .gender {
-    width: 2.3vw;
-    height: 2.3vw;
+    width: 2vw;
+    height: 2vw;
+}
+.planet_list {
+    min-height: 60vh;
+    width: 100%;
+}
+h3 {
+    text-align: center;
+    font-size: 1.5vw;
+    font-family: 'Starjedi';
+    color: yellow;
+    text-transform: lowercase;
+}
+#next-page {
+    width: 25%;
 }
