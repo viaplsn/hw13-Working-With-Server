@@ -16,7 +16,8 @@ function getCharInfo(e) {
         .then((result) => {
             const charLinks = result.data.characters
             charLinks.forEach(element => {
-                axios.get(element)
+                const newElement = element.replace('http', 'https');
+                axios.get(newElement)
                     .then((result) => {
                         const name = result.data.name;
                         const birth = result.data.birth_year;
@@ -48,7 +49,7 @@ async function getPlanets() {
     infoContainer.insertAdjacentHTML("afterbegin", `<h2>planet list in the star wars universe:</h2>`);
     infoContainer.insertAdjacentHTML("beforeend", `<div class="planet_list"></div>`);
     let planetContainer = document.querySelector('.planet_list');
-    await axios.get(`http://swapi.dev/api/planets/?page=${currentPage}`)
+    await axios.get(`https://swapi.dev/api/planets/?page=${currentPage}`)
         .then((result) => {
             const planetList = result.data.results;
             planetList.forEach(element => {
@@ -63,7 +64,7 @@ async function getPlanets() {
         while(planetContainer.firstChild) {
             planetContainer.removeChild(planetContainer.firstChild);
         };
-        axios.get(`http://swapi.dev/api/planets/?page=${currentPage}`)
+        axios.get(`https://swapi.dev/api/planets/?page=${currentPage}`)
         .then((result) => {
             const planetList = result.data.results;
             planetList.forEach(element => {
